@@ -23,10 +23,18 @@ export class RecipeService {
       [
         new Ingredient('Buns', 2),
         new Ingredient('Meat', 1)
-      ])
+      ]),
+    new Recipe('Bakso',
+      'Super Bakso',
+      'https://food.fnr.sndimg.com/content/dam/images/food/fullset/2018/12/20/0/WU2103_Texmex-Meatballs_s4x3.jpg.rend.hgtvcom.826.620.suffix/1545325993063.jpeg',
+      [
+        new Ingredient('Flour', 1),
+        new Ingredient('Meat', 5)
+      ]
+    )
   ];
 
-  constructor(private slService: ShoppingListService) {}
+  constructor(private slService: ShoppingListService) { }
 
   getRecipes() {
     return this.recipes.slice();
